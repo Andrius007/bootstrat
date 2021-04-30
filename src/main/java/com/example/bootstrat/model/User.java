@@ -120,7 +120,7 @@ public class User implements UserDetails {
 
     @Override
     public Set<? extends GrantedAuthority> getAuthorities() {
-        return roles.stream().map(r -> new SimpleGrantedAuthority(r.getRoleName())).collect(Collectors.toSet());
+        return roles;
     }
 
     @Override
